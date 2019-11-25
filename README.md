@@ -51,7 +51,7 @@ def assign_op_tensor(x, updates, cord_i, cord_j, n_chan):
     return(updated)
 
 ```
-This is the layout of the custom layer:
+This is the layout of the custom layer, here we address the problem only fot the foreward propagation, 
 ```python
 @tf.function
 def out_res(x):
@@ -70,7 +70,7 @@ def out_res(x):
 @tf.custom_gradient
 def custom_op(x):
     result = out_res(x) # do forward computation
-    def custom_grad(dy):
+    def custom_grad(dy): # do the backward...
         print(dy, [dy])
         grad = dy # compute gradient
         return grad
