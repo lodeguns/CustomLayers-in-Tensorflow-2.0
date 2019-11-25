@@ -1,4 +1,4 @@
-# CustomLayers-in-Tensorflow-2.0
+# Custom Layers in Tensorflow 2.0
 The script below shows how to modify, with a customized layer, the value of the tensors of a network being trained. This behaviour is modelled considering static and dynamic operation assignments. The layout is written with the new version of Tensorflow 2.0 and Keras 2.3.0, Cublas 10 and Cudnn 7.
 
 
