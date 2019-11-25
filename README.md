@@ -108,7 +108,7 @@ dott. Francesco Bardozzo (fbardozzo@unisa.it)
 
 dott. Mattia Delli Priscoli  (mdellipriscoli@unisa.it)
 
-@NeuroneLab - University of Salerno - It
+@NeuroneLab - University of Salerno - IT
 
 
 
