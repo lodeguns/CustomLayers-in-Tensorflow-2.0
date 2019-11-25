@@ -104,9 +104,9 @@ CUDA/cuDNN version:10.0/7.0
 **TF2.0 solved issue**
 Attached the issue and the problems faced to develop this: [solved issue](https://github.com/tensorflow/tensorflow/issues/34549)
 
-Dott. Francesco Bardozzo (fbardozzo@unisa.it)
+dott. Francesco Bardozzo (fbardozzo@unisa.it)
 
-Dott. Mattia Delli Priscoli  (mdellipriscoli@unisa.it)
+dott. Mattia Delli Priscoli  (mdellipriscoli@unisa.it)
 
 @NeuroneLab - University of Salerno - It
 
