@@ -6,7 +6,7 @@ The script below shows how to modify, with a customized layer, the value of the 
 The toy problem is checked on MNIST.  
 
 The model and the training is written in the attached script in python.
-Run in the terminal: python3 customlayer.py
+Run in the terminal: ```  python3 customlayer.py ``` 
 
 We have done the experiment on a **NVIDIA GeForce RTX 2060**.
 
