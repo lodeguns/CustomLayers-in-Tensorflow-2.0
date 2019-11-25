@@ -33,27 +33,42 @@ def create_model():
 def ith_element(x, i, j, n_chan):
     return tf.reshape( x[0, i:i + 1, j:j + 1, n_chan ], (-1,))
 
+```
+Assign a single tensor value, computed after some operations to the tensor into the position (row,col)
+on the channel -sel_chan-. In this case we are extracting 2 values, and we assign the harmonic mean
+of these values. 
+The dynamics consists of considering the symbolic value of the tensor and its computations. 
+```python
 @tf.function
 def dyn_assignment(z, row, col, sel_chan, T ):
-    # some operatiions
+    # some operations
     out_val0 = ith_element(z, row, col, sel_chan)*T
     out_val1 = ith_element(z, row, col, sel_chan)*T
     value_to_assign = tf.math.add_n([out_val0, out_val1, out_val1])
     z = assign_op_tensor(z, value_to_assign, row, col, sel_chan)
     return z
 
+```
+Assign a single constant value T:
+
+```python
 @tf.function
 def static_assignment(x, row, col, sel_chan, T):
     up_val =  tf.constant([T], dtype=tf.float32)
     z = assign_op_tensor(x, up_val, row, col, sel_chan)
     return z
-
+```
+ This is the assign operator:
+```python
 @tf.function
 def assign_op_tensor(x, updates, cord_i, cord_j, n_chan):
     indices = tf.constant([[0, cord_i, cord_j, n_chan]])
     updated = tf.tensor_scatter_nd_update(x, indices, updates)
     return(updated)
 
+```
+This is the layout of the custom layer:
+```python
 @tf.function
 def out_res(x):
     dim = x.shape
