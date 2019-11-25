@@ -69,12 +69,12 @@ class CustomLayer(layers.Layer):
 ```
 
 
-Attached the issue and the poblems faced in order to develop this:  
-
-[solved issue](https://github.com/tensorflow/tensorflow/issues/34549)
+Attached the issue and the problems faced to develop this: [solved issue](https://github.com/tensorflow/tensorflow/issues/34549)
 
 Dott. Francesco Bardozzo (fbardozzo@unisa.it)
+
 Dott. Mattia Delli Priscoli  (mdellipriscoli@unisa.it)
+
 @NeuroneLab - University of Salerno - It
 
 
