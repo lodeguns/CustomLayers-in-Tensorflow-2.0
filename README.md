@@ -1,24 +1,8 @@
 # CustomLayers-in-Tensorflow-2.0
 The script below shows how to modify, with a customized layer, the value of the tensors of a network being trained. This behaviour is modelled considering static and dynamic operation assignments. The layout is written with the new version of Tensorflow 2.0 and Keras 2.3.0, Cublas 10 and Cudnn 7.
 
-### Model and Execution
 
-The toy problem is checked on MNIST.  
-
-The model and the training is written in the attached script in python.
-Run in the terminal: ```  python3 customlayer.py ``` 
-
-We have done the experiment on a **NVIDIA GeForce RTX 2060**.
-
-**Environment:**
-``` 
-OS  - Ubuntu: 18.0
-Tensorflow version: 2.0.0
-Keras version: 2.3.0
-Python version: 3.6.8
-CUDA/cuDNN version:10.0/7.0
-``` 
-
+# Implementation of the Custom Layer
 For those impatient, this is the modern layout,
 with hidden placeholders according to the new version of TF.
 
@@ -100,8 +84,24 @@ class CustomLayer(layers.Layer):
         return custom_op(x)
 
 ```
+### Model and Execution
 
+The toy problem is checked on MNIST.  
 
+The model and the training is written in the attached script in python.
+Run in the terminal: ```  python3 customlayer.py ``` 
+
+We have done the experiment on a **NVIDIA GeForce RTX 2060**.
+
+**Environment:**
+``` 
+OS  - Ubuntu: 18.0
+Tensorflow version: 2.0.0
+Keras version: 2.3.0
+Python version: 3.6.8
+CUDA/cuDNN version:10.0/7.0
+``` 
+**TF2.0 solved issue**
 Attached the issue and the problems faced to develop this: [solved issue](https://github.com/tensorflow/tensorflow/issues/34549)
 
 Dott. Francesco Bardozzo (fbardozzo@unisa.it)
