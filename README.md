@@ -51,7 +51,7 @@ def assign_op_tensor(x, updates, cord_i, cord_j, n_chan):
     return(updated)
 
 ```
-This is the layout of the custom layer, here we address the problem only fot the foreward propagation, 
+This is the layout of the custom layer, here we address the problem only for the foreward propagation, 
 ```python
 @tf.function
 def out_res(x):
